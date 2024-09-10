@@ -30,10 +30,10 @@ func outputText(text string){
 	fmt.Print(text)
 }
 
-func calculateFuctureValues(investmentAmount float64, expectedReturn float64, years float64) (float64, float64){
-	fv := investmentAmount * math.Pow(1 + expectedReturn / 100, years)
-	rfv := fv / math.Pow(1 + inflationRate / 100, years)
-	return fv, rfv
+func calculateFuctureValues(investmentAmount float64, expectedReturn float64, years float64) (fv float64, rfv float64){
+	fv = investmentAmount * math.Pow(1 + expectedReturn / 100, years)
+	rfv = fv / math.Pow(1 + inflationRate / 100, years)
+	return
 }
 
 
